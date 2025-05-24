@@ -1,0 +1,262 @@
+/* styles.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0a0a23; /* Dark background */
+  color: #ffffff; /* White text */
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #004d99, #000033); /* Gradient blue */
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #007acc;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Search Bar Styling */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+#searchInput {
+  width: 300px;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #1a1a40; /* Dark blue */
+  color: #ffffff; /* White text */
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#searchInput:focus {
+  box-shadow: 0 0 10px rgba(0, 128, 255, 0.7); /* Glow effect on focus */
+}
+
+/* Category Section */
+.category {
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+.category h2 {
+  font-size: 2rem;
+  color: #00bfff; /* Bright blue */
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Card Styling */
+.card {
+  background-color: #1a1a40; /* Dark blue */
+  border: 1px solid #007acc;
+  border-radius: 12px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 128, 255, 0.5); /* Glow effect on hover */
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: filter 0.3s ease-in-out;
+}
+
+.card:hover img {
+  filter: brightness(1.2); /* Brighten image on hover */
+}
+
+.card p {
+  padding: 0.8rem;
+  margin: 0;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Pagination Controls */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.pagination button {
+  background-color: #007acc; /* Bright blue */
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+  background-color: #00bfff; /* Lighter blue */
+  transform: scale(1.1);
+}
+
+.pagination button.active {
+  background-color: #004d99; /* Darker blue for active page */
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* styles.css */
+
+/* Add these styles for the cart section */
+.cart-section {
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+.cart-section h2 {
+  font-size: 2rem;
+  color: #00bfff; /* Bright blue */
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.empty-cart-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.cart-item {
+  background-color: #1a1a40; /* Dark blue */
+  border: 1px solid #007acc;
+  border-radius: 12px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+
+.cart-item img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.cart-item p {
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.cart-item .remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #ff4d4d; /* Red */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cart-item .remove-btn:hover {
+  background-color: #ff1a1a; /* Darker red */
+}
+
+/* styles.css */
+
+.whatsapp-button-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#sendToWhatsApp {
+  background-color: #1a1a40; /* WhatsApp green */
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#sendToWhatsApp:hover {
+  background-color: #1da851; /* Darker green */
+  transform: scale(1.05);
+}
