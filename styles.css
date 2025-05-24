@@ -175,7 +175,7 @@ header h1 {
 
 .cart-section h2 {
   font-size: 2rem;
-  color: #00bfff; /* Bright blue */
+  color: orange; /* Bright blue */
   margin-bottom: 1rem;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   animation: slideInLeft 1s ease-in-out;
